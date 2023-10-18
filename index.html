@@ -61,7 +61,7 @@
       <section class="starting-section background section">
         <div class="container container-one">
           <h1 class="heading-one">Effective Solutions for Your Business</h1>
-          <button type="button" class="index-s-one-button">
+          <button url("./modal.js") type="button" class="index-s-one-button" data-modal-open>
             Order Service
           </button>
         </div>
@@ -608,5 +608,12 @@
         </div>
       </div>
     </footer>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="close-button" data-modal-close></button>
+  </div>
+</div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
