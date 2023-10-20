@@ -103,6 +103,31 @@ p {
   padding: 24px 0;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--pressed-state);
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: var(--gap-header);
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--pressed-state);
+  border-radius: 2px;
+  display: flex;
 }
 
 .menu-item {
@@ -124,17 +149,7 @@ nav .logo-studio {
   color: var(--dark);
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--pressed-state);
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-  gap: var(--gap-header);
-}
+
 
 .address {
   display: flex;
@@ -147,15 +162,14 @@ nav .logo-studio {
 
 .mail-tel {
   color: var(--text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-tel:hover {
-  color: var(--pressed-state);
-}
-
+.mail-tel:hover,
 .mail-tel:focus {
   color: var(--pressed-state);
 }
+
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -278,7 +292,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   min-width: 169px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .index-s-one-button:hover, .index-s-one-button:focus {
@@ -496,7 +510,7 @@ align-items: center;
 width: 100%;
 height: 100%;
 color: var(--subtle-text);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon:hover, .icon:focus {
